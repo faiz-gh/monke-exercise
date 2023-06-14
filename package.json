@@ -1,0 +1,22 @@
+{
+  "name": "monke-exercise",
+  "version": "1.0.0",
+  "description": "Backend Server using NodeJS and JWTToken",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/faiz-gh/monke-exercise.git"
+  },
+  "keywords": [
+    "nodejs"
+  ],
+  "author": "Faiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/faiz-gh/monke-exercise/issues"
+  },
+  "homepage": "https://github.com/faiz-gh/monke-exercise#readme"
+}
