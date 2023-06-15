@@ -4,22 +4,20 @@
   "description": "Backend Server using NodeJS and JWTToken",
   "main": "server.js",
   "scripts": {
-    "test": "test"
+     "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/faiz-gh/monke-exercise.git"
   },
-  "keywords": [
-    "nodejs"
-  ],
-  "author": "Faiz",
+  "author": "Faiz Ghanchi",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/faiz-gh/monke-exercise/issues"
   },
   "homepage": "https://github.com/faiz-gh/monke-exercise#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
   }
 }
