@@ -2,7 +2,7 @@
   "name": "monke-exercise",
   "version": "1.0.0",
   "description": "Backend Server using NodeJS and JWTToken",
-  "main": "main.js",
+  "main": "server.js",
   "scripts": {
     "test": "test"
   },
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/faiz-gh/monke-exercise/issues"
   },
-  "homepage": "https://github.com/faiz-gh/monke-exercise#readme"
+  "homepage": "https://github.com/faiz-gh/monke-exercise#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
