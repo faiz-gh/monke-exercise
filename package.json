@@ -4,7 +4,9 @@
   "description": "Backend Server using NodeJS and JWTToken",
   "main": "server.js",
   "scripts": {
-     "dev": "nodemon server.js"
+     "start": "nodemon server.js",
+     "migrate": "node ./migrations/000001_createUsersTable.js",
+     "db": "docker exec -it monke-exercise-db-1 psql -U admin -d monke"
   },
   "repository": {
     "type": "git",

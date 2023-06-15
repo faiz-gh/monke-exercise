@@ -1,26 +1,18 @@
-version: "3"
+version: '3.9'
+
 services:
-  app:
-    restart: on-failure
+  server:
     build: .
-    depends_on:
-      - postgres
-    environment:
-      DATABASE_URL: postgres://admin:12345678@postgres:5432/exercise
-      NODE_ENV: development
-      PORT: 3000
     ports:
       - "3000:3000"
-    command: npm run dev
-    volumes:
-      - .:/app/
-      - /app/node_modules
-
-  postgres:
-    image: postgres:15-alpine
-    ports:
-      - "5432:5432"
+  db:
+    image: 'postgres'
     environment:
-      POSTGRES_USER: admin
-      POSTGRES_PASSWORD: 12345678
-      POSTGRES_DB: exercise
+      POSTGRES_PASSWORD: '12345678'
+      POSTGRES_USER: 'admin'
+      POSTGRES_DB: 'monke'
+    volumes:
+      - data:/var/lib/postgresql/data
+
+volumes:
+  data:
