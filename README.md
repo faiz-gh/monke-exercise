@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a simple backend exercise that uses Node.js and Express.js to create a server that serves JSON as a response to a REST API calls.
+This is a backend server template that uses Node.js and Express.js to create a server that serves JSON as a response to a REST API calls. Postgresql is used as the database and Knex.js is used as the query builder. Docker is used to configure the environment and run the database.
 
 ## Instructions
 
@@ -18,14 +18,37 @@ git clone https://github.com/faiz-gh/monke-exercise.git
 cd monke-exercise
 ```
 
-**Step-4:** Download the node image from Docker Hub.
-```bash
-docker pull node:lts-alpine3.18
-```
-
-**Step-5:** Run the following command to build and run the docker containers.
+**Step-4:** Run the following command to build and run the postgres database.
 ```bash
 docker-compose up --build -d
 ```
 
-**Step-6:** Open your browser and go to [http://localhost:3000](http://localhost:3000/) to see the result.
+## Tips
+
+* The server runs on http://localhost:3000.
+* You can access the database cli by running the following command:
+```bash
+    npm run db
+```
+* You can access the node server cli by running the following command:
+```bash
+    npm run server
+```
+* You can access the database using the following credentials:
+```bash
+    host: localhost
+    port: 5432
+    username: admin
+    password: 12345678
+    database: monke
+```
+* You can create a new migration using the following command:
+```bash
+    knex migrate:make migration-name
+```
+* You can rollback the migrations using the following command:
+```bash
+    knex migrate:rollback
+```
+
+Hope you find the template helpful. Happy Coding!

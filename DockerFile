@@ -4,6 +4,7 @@ WORKDIR /app
 
 COPY ./package.json .
 RUN npm cache clean --force
+RUN npm install nodemon knex pg -g
 RUN npm install
 
 COPY . .

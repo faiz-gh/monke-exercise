@@ -1,6 +1,11 @@
 const express = require('express');
 const app = express();
-const BodyParser = require('body-parser');
+const bodyParser = require('body-parser');
+
+// Importing routes
+const customerRoutes = require('./routes/customerRouter.js');
+const productRoutes = require('./routes/productRouter.js');
+const orderRoutes = require('./routes/orderRouter.js');
 
 const PORT = 3000;
 app.listen(PORT, () => {
@@ -8,15 +13,14 @@ app.listen(PORT, () => {
 });
 
 // Middleware for parsing JSON and URL-encoded query string
-app.use(BodyParser.json({
+app.use(bodyParser.json({
     limit: '50mb',
 })); // parse JSON
-app.use(BodyParser.urlencoded({
+app.use(bodyParser.urlencoded({
     limit: '50mb',
     extended: false,
 })); // parse URL-encoded bodies
 
-
-app.get('/', (req, res) => {
-    res.send('Hello World' + req.path);
-});
+app.use('/customer', customerRoutes);
+app.use('/product', productRoutes);
+app.use('/order', orderRoutes);
