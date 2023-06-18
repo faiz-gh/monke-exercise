@@ -18,7 +18,12 @@ git clone https://github.com/faiz-gh/monke-exercise.git
 cd monke-exercise
 ```
 
-**Step-4:** Run the following command to build and run the postgres database.
+**Step-4:** Run the following command to pull the node image from docker hub.
+```bash
+docker pull node:lts-alpine3.18
+```
+
+**Step-5:** Run the following command to build and run the postgres database.
 ```bash
 docker-compose up --build -d
 ```
@@ -36,7 +41,7 @@ docker-compose up --build -d
 ```
 * You can access the database using the following credentials:
 ```bash
-    host: localhost
+    host: db
     port: 5432
     username: admin
     password: 12345678
