@@ -42,7 +42,6 @@ docker-compose up --build -d
 * You can access the database using the following credentials:
 ```bash
     host: db
-    port: 5432
     username: admin
     password: 12345678
     database: monke
