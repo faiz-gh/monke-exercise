@@ -4,7 +4,7 @@
   "description": "Backend Server using NodeJS, ExpressJS and PostgreSQL",
   "main": "server.js",
   "scripts": {
-    "start": "knex migrate:latest && nodemon server.js",
+    "start": "nodemon server.js",
     "db": "docker exec -it postgres-db psql -U admin -d monke",
     "server": "docker exec -it node-server"
   },
